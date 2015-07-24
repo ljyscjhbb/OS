@@ -43,7 +43,7 @@ extern uint8_t kern_end[];
 extern uint32_t phy_page_count;
 
 // 输出 BIOS 提供的物理内存布局
-void show_memory_map();
+void show_memorymap();
 
 // 初始化物理内存管理
 void init_pmm();
@@ -52,7 +52,7 @@ void init_pmm();
 uint32_t pmm_alloc_page();
 
 // 释放申请的内存
-void pmm_free_page(uint32_t p);
+void pmm_free(uint32_t p);
 
 #endif 	// INCLUDE_PMM_H
 

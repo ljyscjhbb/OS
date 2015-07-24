@@ -1,26 +1,30 @@
-/*************************************************************************//**
- *****************************************************************************
- * @file   fs/open.c
- * The file contains:
- *   - do_open()
- *   - do_close()
- *   - do_lseek()
- *   - create_file()
- *****************************************************************************
- *****************************************************************************/
+/*
+ * =====================================================================================
+ *
+ *       Filename:  oepn.c
+ *
+ *    Description:  
+ *
+ *        Version:  1.0
+ *        Created:  2015年7月22日 12时06分00秒
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *
+ * =====================================================================================
+ */
 
-#include "type.h"
-#include "stdio.h"
+#include "common.h"
+#include "debug.h"
 #include "const.h"
-#include "protect.h"
-#include "string.h"
-#include "fs.h"
-#include "proc.h"
-#include "tty.h"
+#include "elf.h"
+#include "gdt.h"
+#include "idt.h"
+#include "multiboot.h"
+#include "pmm.h"
 #include "console.h"
-#include "global.h"
-#include "keyboard.h"
-#include "proto.h"
+#include "keymap.h"
+#include "string.h"
 
 PRIVATE struct inode * create_file(char * path, int flags);
 PRIVATE int alloc_imap_bit(int dev);
